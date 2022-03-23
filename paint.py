@@ -12,6 +12,7 @@ Exercises
 from turtle import *
 
 from freegames import vector
+import math #Importamos math para poder realizar las figuras
 
 
 def line(start, end):
@@ -38,9 +39,18 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
+    up()
+    goto(start.x,start.y) # Definit el inicio
+    down()
+    begin_fill()
     
+    #Se crea un rango para una revolución de 360 grados y se repetira hasta completarlo
+    for count in range(360):    
+        # Se convierten grados en radianes y se usa el radio para la creacion del circulo 
+        fd(math.sin(math.radians(1))*(math.sqrt((end.x - start.x)**2+(end.y - start.y)**2)))
+        lt(1) # gira 1 grado
+    end_fill()
     pass  # TODO
-
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
