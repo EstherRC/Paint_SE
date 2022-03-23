@@ -38,6 +38,7 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
+    
     pass  # TODO
 
 
@@ -79,6 +80,10 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+
+"""Nuevo color insertado abajo"""
+onkey(lambda: color('yellow'), 'Y')
+
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
